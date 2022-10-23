@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
@@ -22,7 +23,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
         style={{ background: dotColor }}
         className="absolute inline-flex rounded-full h-2 w-2 right-2 top-2"
       />
-      {icon}
+        {icon}
     </button>
   </TooltipComponent>
 );
@@ -49,7 +50,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (screenSize <= 900) {
+    if(screenSize <= 900) {
       setActiveMenu(false);
     } else {
       setActiveMenu(true);
@@ -91,9 +92,12 @@ const Navbar = () => {
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg"
             onClick={() => handleClick("userProfile")}
           >
-            <img className="rounded-full w-8 h-8" src={avatar} />
+            <img 
+              className="rounded-full w-8 h-8"
+              src={avatar}
+            />
             <p>
-              <span className="text-gray-400 text-14">Hi,</span> {""}
+              <span className="text-gray-400 text-14">Hi,</span> {" "}
               <span className="text-gray-400 font-bold ml-1 text-14">
                 Michael
               </span>
